@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "MacroScript",
+  "scopeName": "source.macroscript",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "name": "comment.line.double-slash.macroscript",
+      "match": "(//).*$"
+    },
+    "keywords": {
+      "name": "keyword.control.macroscript",
+      "match": "(?i)\\b(if|else|endif|while|endwhile|break|Label|Goto)\\b"
+    },
+    "functions": {
+      "name": "entity.name.function.macroscript",
+      "match": "(?i)\\b(Delay|Mouse|Key|PixelColor|RGB|Custom)\\b"
+    },
+    "constants": {
+      "name": "constant.language.macroscript",
+      "match": "(?i)\\b(LeftDown|LeftUp|RightDown|RightUp|MiddleDown|MiddleUp|Wheel|Move|KeyDown|KeyUp|LControlKey|RControlKey|LShiftKey|RShiftKey|LMenu|RMenu|Enter|Space|Tab|Back|Delete|Escape|C|V|X|A|Z)\\b"
+    },
+    "strings": {
+      "name": "string.quoted.double.macroscript",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.macroscript",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.macroscript",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    "operators": {
+      "name": "keyword.operator.comparison.macroscript",
+      "match": "(==|!=)"
+    }
+  }
+}
