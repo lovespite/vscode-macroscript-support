@@ -73,8 +73,8 @@ function activate(context) {
             pixelColorSnippet.insertText = new vscode.SnippetString('PixelColor(${1:x}, ${2:y})');
             const rgbSnippet = new vscode.CompletionItem('RGB(r, g, b, tolerance)', vscode.CompletionItemKind.Function);
             rgbSnippet.insertText = new vscode.SnippetString('RGB(${1:255}, ${2:0}, ${3:0}, ${4:tolerance})');
-            const customSnippet = new vscode.CompletionItem('Custom("expression")', vscode.CompletionItemKind.Function);
-            customSnippet.insertText = new vscode.SnippetString('Custom("${1:true}")');
+            const customSnippet = new vscode.CompletionItem('Custom(`expression`)', vscode.CompletionItemKind.Function);
+            customSnippet.insertText = new vscode.SnippetString('Custom(`${1:true}`)');
             const ifSnippet = new vscode.CompletionItem('if ... endif', vscode.CompletionItemKind.Snippet);
             ifSnippet.insertText = new vscode.SnippetString('if (${1:PixelColor(10, 20) == RGB(255, 0, 0, 5)})\n\t${0}\nendif');
             const ifElseSnippet = new vscode.CompletionItem('if ... else ... endif', vscode.CompletionItemKind.Snippet);

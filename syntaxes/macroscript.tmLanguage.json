@@ -19,6 +19,9 @@
       "include": "#strings"
     },
     {
+      "include": "#strings2"
+    },
+    {
       "include": "#numbers"
     },
     {
@@ -46,6 +49,17 @@
       "name": "string.quoted.double.macroscript",
       "begin": "\"",
       "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.macroscript",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "strings2": {
+      "name": "string.quoted.other.macroscript",
+      "begin": "`",
+      "end": "`",
       "patterns": [
         {
           "name": "constant.character.escape.macroscript",

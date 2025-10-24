@@ -61,8 +61,8 @@ export function activate(context: vscode.ExtensionContext) {
             const rgbSnippet = new vscode.CompletionItem('RGB(r, g, b, tolerance)', vscode.CompletionItemKind.Function);
             rgbSnippet.insertText = new vscode.SnippetString('RGB(${1:255}, ${2:0}, ${3:0}, ${4:tolerance})');
 
-            const customSnippet = new vscode.CompletionItem('Custom("expression")', vscode.CompletionItemKind.Function);
-            customSnippet.insertText = new vscode.SnippetString('Custom("${1:true}")');
+            const customSnippet = new vscode.CompletionItem('Custom(`expression`)', vscode.CompletionItemKind.Function);
+            customSnippet.insertText = new vscode.SnippetString('Custom(`${1:true}`)');
 
             const ifSnippet = new vscode.CompletionItem('if ... endif', vscode.CompletionItemKind.Snippet);
             ifSnippet.insertText = new vscode.SnippetString(
