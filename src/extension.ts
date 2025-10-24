@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 // 关键字
-const keywords = ['if', 'else', 'endif', 'while', 'endwhile', 'break', 'Label', 'Goto'];
+const keywords = ['if', 'else', 'endif', 'while', 'endwhile', 'break', 'label', 'goto', 'exit', 'script', 'endscript'];
 // 函数
 const functions = ['Delay', 'Mouse', 'Key', 'PixelColor', 'RGB', 'Custom'];
 // 枚举值
@@ -79,12 +79,16 @@ export function activate(context: vscode.ExtensionContext) {
                 'while (${1:PixelColor(10, 20) != RGB(255, 255, 255)})\n\t${0}\nendwhile'
             );
 
-            const labelSnippet = new vscode.CompletionItem('Label(name)', vscode.CompletionItemKind.Snippet);
-            labelSnippet.insertText = new vscode.SnippetString('Label(${1:MyLabel})');
+            const labelSnippet = new vscode.CompletionItem('label name', vscode.CompletionItemKind.Snippet);
+            labelSnippet.insertText = new vscode.SnippetString('label ${1:MyLabel}');
 
-            const gotoSnippet = new vscode.CompletionItem('Goto(name)', vscode.CompletionItemKind.Snippet);
-            gotoSnippet.insertText = new vscode.SnippetString('Goto(${1:MyLabel})');
+            const gotoSnippet = new vscode.CompletionItem('goto name', vscode.CompletionItemKind.Snippet);
+            gotoSnippet.insertText = new vscode.SnippetString('goto ${1:MyLabel}');
 
+            const scriptSnippet = new vscode.CompletionItem('script(name) ... endscript', vscode.CompletionItemKind.Snippet);
+            scriptSnippet.insertText = new vscode.SnippetString(
+                'script(${1:MyScript})\n\nendscript'
+            );
 
             // 聚合所有补全项
             return [
@@ -102,7 +106,8 @@ export function activate(context: vscode.ExtensionContext) {
                 ifElseSnippet,
                 whileSnippet,
                 labelSnippet,
-                gotoSnippet
+                gotoSnippet,
+                scriptSnippet
             ];
         }
     });

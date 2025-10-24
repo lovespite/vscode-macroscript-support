@@ -35,7 +35,7 @@
     },
     "keywords": {
       "name": "keyword.control.macroscript",
-      "match": "(?i)\\b(if|else|endif|while|endwhile|break|Label|Goto)\\b"
+      "match": "(?i)\\b(if|else|endif|while|endwhile|break|exit|label|goto|script|endscript)\\b"
     },
     "functions": {
       "name": "entity.name.function.macroscript",
