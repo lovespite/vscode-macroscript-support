@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/badge/version-0.2.1-blue.svg)](https://github.com/lovespite/vscode-macroscript-support)
 [![VS Code](https://img.shields.io/badge/VS%20Code-1.82.0+-brightgreen.svg)](https://code.visualstudio.com/)
 
-为 MacroCreator 的 `.macroscript` DSL 提供全面的 Visual Studio Code 语言支持，包括语法高亮、智能补全和代码片段。
+为 [MacroCreator](https://github.com/lovespite/MacroCreator) 的 `.macroscript` DSL 提供全面的 Visual Studio Code 语言支持，包括语法高亮、智能补全和代码片段。
 
 ## 功能特性
 
