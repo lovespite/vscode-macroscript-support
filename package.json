@@ -2,7 +2,7 @@
   "name": "macroscript-language-support",
   "displayName": "MacroScript Language Support",
   "description": "为 MacroCreator 的 .macroscript DSL 提供语法高亮和自动补全。",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "publisher": "macro-creator-user",
   "engines": {
     "vscode": "^1.82.0"
