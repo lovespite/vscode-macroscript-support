@@ -117,6 +117,8 @@ function activate(context) {
             keyUpSnippet.insertText = new vscode.SnippetString('KeyUp(${1:Key}, ${2:delayMs})');
             const keyPressSnippet = new vscode.CompletionItem('KeyPress(key1, key2, ..., delayMs)', vscode.CompletionItemKind.Function);
             keyPressSnippet.insertText = new vscode.SnippetString('KeyPress(${1:Key}, ${2:delayMs})');
+            const forStatementSnippet = new vscode.CompletionItem('for ... endfor', vscode.CompletionItemKind.Snippet);
+            forStatementSnippet.insertText = new vscode.SnippetString('for ${1:i} = ${2:0} to ${3:10} step ${4:1})\n\t${0}\nendfor');
             // 聚合所有补全项
             return [
                 ...keywordCompletions,
@@ -143,6 +145,7 @@ function activate(context) {
                 keyDownSnippet,
                 keyUpSnippet,
                 keyPressSnippet,
+                forStatementSnippet,
             ];
         }
     });
